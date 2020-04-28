@@ -16,8 +16,8 @@ export const ProductList = () => {
           title={code.product.ingredients_text}
           coverImage={code.product.image_url}
           secondaryText={code.product.brands}>
-          <Text>More details:<br></br>
-            <Link a href={`https://world.openfoodfacts.org/product/${code.product.code}/`}></Link>
+          <Text>
+            <Link a href={`https://world.openfoodfacts.org/product/${code.product.code}/`} target="_blank">More Details</Link>
             <p>Origin: {code.product.origins}</p>
             <p>Vegan: {code.product.ingredients[0].vegan}</p>
             <p>Vegetarian: {code.product.ingredients[1].vegetarian}</p>
@@ -31,10 +31,11 @@ export const ProductList = () => {
 }
 
 const Link = styled.a`
-color: palevioletred;
-font-size: 16px;
+color: grey;
+font-size: 18px;
   `
 const Text = styled.h3`
 font-size: 18px;
-font-weight: 500;
+font-weight: 400;
+text-align: left;
   `
