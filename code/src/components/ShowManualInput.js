@@ -93,6 +93,9 @@ const ManualButton = styled.button`
   &:hover {
     transform: scale(1.05)
   }
+  &:active {
+    background: #F2CB05;
+  }
 `
 
 const ManualButtonText = styled.button`
@@ -102,6 +105,13 @@ const ManualButtonText = styled.button`
   border: none;
   cursor: pointer;
   margin: 8px;
+  transition: 4sec;
+  &:clicked {
+    color: white;
+  }
+  &:focus {
+    outline: none;
+  }
 `
 
 const Input = styled.input`
