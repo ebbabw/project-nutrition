@@ -42,6 +42,12 @@ justify-content:center;
 align-items:center;
 background-image: url(${lemonBackground})
 height: 20vh;
+@media (max-width: 449px) {
+  width: 80%;
+}
+@media (min-width: 450px) and (max-width: 750px) {
+ width: 80%;
+}
 `
 
 
