@@ -9,9 +9,9 @@ export const Card = ({ title, secondaryText, thumbNailUrl, coverImage, className
     <Container className={className}>
       <TitleBar>
         <div>
+          {coverImage && <CoverImage src={coverImage} />}
           {title && <Title>{title}</Title>}
           {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
-          {coverImage && <CoverImage src={coverImage} />}
         </div>
       </TitleBar>
       <Content>
@@ -54,7 +54,7 @@ const TitleBar = styled.div`
   border-radius: 6px 6px 0px 0px;
   align-items: center;
   padding: 30px;
-  background: #f1f1f1;
+  background: #cacc6a;
 `
 const Content = styled.div`
   padding: 10px;

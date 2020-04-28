@@ -23,16 +23,27 @@ export const ShowScanner = () => {
         </Wrapper>
       )
       }
-
-      {
-        showScanner && (
+      <CameraContainer>
+        {showScanner && (
           <BarcodeScanner
             onDetected={(code) => {
               setShowScanner(false)
               dispatch(fetchProduct(code))
             }} />
         )
-      }
+        }
+
+        {showScanner && (
+          <CameraWrapper>
+            <Button onClick={() => setShowScanner(false)}>
+              <ButtonText>
+                TURN OFF
+          </ButtonText>
+            </Button>
+          </CameraWrapper>
+        )
+        }
+      </CameraContainer>
     </Container >
   )
 }
@@ -40,6 +51,16 @@ export const ShowScanner = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+`
+
+const CameraContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const CameraWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `
 
 const Button = styled.button`
@@ -70,8 +91,8 @@ color: white;
 
 const Container = styled.div`
  display: flex;
+ flex-direction: row;
  justify-content: center;
-  }
 `
 
 const Text = styled.p`
