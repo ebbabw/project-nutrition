@@ -44,9 +44,11 @@ background-image: url(${lemonBackground})
 height: 20vh;
 @media (max-width: 449px) {
   width: 80%;
+  padding: 30px;
 }
 @media (min-width: 450px) and (max-width: 750px) {
  width: 80%;
+ padding: 30px;
 }
 `
 
