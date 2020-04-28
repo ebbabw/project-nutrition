@@ -4,7 +4,6 @@ import { fetchProduct } from 'reducers/products'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 
-
 export const ShowScanner = () => {
   const [showScanner, setShowScanner] = useState(false)
 
@@ -14,11 +13,14 @@ export const ShowScanner = () => {
   return (
     <Container >
       {!showScanner && (
-        <Button onClick={() => setShowScanner(true)}>
-          <ButtonText>
-            SCANNER
+        <Wrapper>
+          <Text>Click here to scan your product:</Text>
+          <Button onClick={() => setShowScanner(true)}>
+            <ButtonText>
+              SCANNER
           </ButtonText>
-        </Button>
+          </Button>
+        </Wrapper>
       )
       }
 
@@ -35,24 +37,31 @@ export const ShowScanner = () => {
   )
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 const Button = styled.button`
   display: inline-block;
-  color: #F2F2F2;
   font-size: 1em;
+  background: #F2CB05;
   margin-bottom: 1em;
-  border: 2px solid #F23054;
+  border: 2px solid #F2CB05;
   border-radius: 10px;
   cursor: pointer;
-  display: block;
+  transition: 0.5s;
   &:hover {
-    background: #F23054;
+    transform: scale(1.03);
+    opacity: 0.8;
   }
 `
+
 const ButtonText = styled.div`
 display: flex;
 padding: 15px;
 font-weight: 800;
-color: #F23054;
+color: white;
 &:hover {
   color: white;
   transition: 0.4s;
@@ -65,4 +74,8 @@ const Container = styled.div`
   }
 `
 
-
+const Text = styled.p`
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-right: 50px;
+`

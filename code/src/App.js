@@ -8,6 +8,8 @@ import { ProductList } from 'components/ProductList'
 import { ShowScanner } from 'components/ShowScanner'
 import { ShowManualInput } from 'components/ShowManualInput'
 import { Header } from 'lib/Header'
+import lemonBackground from 'assets/lemonBackground.jpg'
+import { Footer } from 'lib/Footer'
 import styled from 'styled-components'
 
 
@@ -28,7 +30,7 @@ export const App = () => {
         <ShowScanner />
         <ShowManualInput />
       </Main>
-
+      <Footer />
     </Provider>
   );
 };
@@ -38,4 +40,8 @@ display: flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+background-image: url(${lemonBackground})
+height: 20vh;
 `
+
+

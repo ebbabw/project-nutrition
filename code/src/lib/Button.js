@@ -24,10 +24,10 @@ const Button = styled.button`
   margin-top: 20px;
   padding: 20px 15px;
   background: #f1f1f1;
-  border: 3px solid #721817;
+  border: 3px solid #F2CB05;
   border-radius: 6px;
   transition: 0.4s;
   &:hover {
-    background: #D8C0BF;
+    background: #F2CB05;
   }
 `
