@@ -17,7 +17,7 @@ export const ShowScanner = () => {
           <Text>Click here to scan your product:</Text>
           <Button onClick={() => setShowScanner(true)}>
             <ButtonText>
-              SCANNER
+              SCAN
           </ButtonText>
           </Button>
         </Wrapper>
