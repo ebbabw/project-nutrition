@@ -17,5 +17,5 @@ const FooterSection = styled.section`
   padding: 18px;
   margin-top: 40px;
   border-top: 1px solid white;
-  height: 40px;
+  height: 20px;
 `
