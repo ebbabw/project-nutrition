@@ -78,6 +78,7 @@ const Text = styled.p`
 
 const ManualButton = styled.button`
   display: inline;
+  text-transform:
   border: 2px solid #F2CB05;
   padding: 5px 0 5px 0;
   cursor: pointer;

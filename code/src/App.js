@@ -12,7 +12,6 @@ import { Footer } from 'lib/Footer'
 import lemonBackground from 'assets/lemonBackground.jpg'
 import styled from 'styled-components'
 
-
 const reducer = combineReducers({
   ui: ui.reducer,
   products: products.reducer
