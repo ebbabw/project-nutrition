@@ -1,13 +1,18 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
+This app is using the web camera to scan bar codes on food packages to retrieve the product name and nutritional information (if it is available in the database from Open Food Facts).
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The app uses quagga to access the webcam and scan products. It's built in React and use Redux as a global state store. 
 
-## The problem
+It is styled with styled-components.
+Tech used: React, Redux // Redux Toolkit, JSX, Javascript.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Learnings
+
+- Use of redux, using a thunk to wrap the api call;
+- Handle when a product isn't found. 
+
 
 ## View it live
+https://competent-sammet-b91c6e.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
