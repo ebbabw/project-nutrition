@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Card } from './Card'
+import { Card } from '../lib/Card'
 import { Error } from './Error'
 import styled from 'styled-components/macro'
 
@@ -11,7 +11,7 @@ export const ProductList = () => {
 
   return (
     <>
-
+      {/* 1. This code below is not exactly what we wanted to print out but it works with all products. What we wanted to achieve is part 2 */}
       {code.product && code.status === 1 && (
         <Card
           coverImage={code.product.image_url}
@@ -25,6 +25,7 @@ export const ProductList = () => {
         </Card>
       )}
 
+      {/*2. The code below works as long as the JSON file contains an ingredients object containing itself "vegan" or "vegetarian". BUT some products don't even have this information, so "vegan" and "vegetarian" are returned as undefined. */}
       {/* {code.product && code.status === 1 && (
         <Card
           coverImage={code.product.image_url}
@@ -40,6 +41,7 @@ export const ProductList = () => {
           <FinalText>Thank you and have a healthy life!</FinalText>
         </Card>
       )} */}
+
       {code.status === 0 && <Error msg={code.status_verbose} />}
     </>
   )

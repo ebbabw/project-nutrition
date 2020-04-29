@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 
 export const Footer = () => {
   return (
-    <FooterSection><a href="https://github.com/annesophiegendron/project-nutrition" target="_blank">Anne-Sophie Gendron & Ebba Bergholtz-Widell</a> - Technigo project April 2020</FooterSection>
+    <FooterSection><a href="https://github.com/annesophiegendron/project-nutrition" target="_blank" rel="noopener noreferrer">Anne-Sophie Gendron & Ebba Bergholtz-Widell</a> - Technigo project April 2020</FooterSection>
   )
 }
 

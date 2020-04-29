@@ -8,6 +8,7 @@ export const ShowScanner = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
 
+  // eslint-disable-next-line
   const onDetected = (code) => {
     console.log(`Code: ${code}`);
     fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)

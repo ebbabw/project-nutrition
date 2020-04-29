@@ -7,7 +7,7 @@ export const Header = () => (
 
   <Wrapper>
     <TextWrapper>
-      <PrimaryText>Do you want to know if your product is environmental friendly?</PrimaryText>
+      <PrimaryText>Do you want to know if  your product is environmental friendly?</PrimaryText>
       <SecondaryText>Press "SCAN" and scan the barcode with your camera!</SecondaryText>
     </TextWrapper>
   </Wrapper>
