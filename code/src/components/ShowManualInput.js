@@ -78,7 +78,7 @@ const Text = styled.p`
 
 const ManualButton = styled.button`
   display: inline;
-  text-transform:
+  text-transform: uppercase;
   border: 2px solid #F2CB05;
   padding: 5px 0 5px 0;
   cursor: pointer;
@@ -96,6 +96,7 @@ const ManualButton = styled.button`
 
 const ManualButtonText = styled.button`
   color: #F2CB05;
+  text-transform: uppercase;
   font-weight: 600;
   font-size: 13px;
   border: none;
