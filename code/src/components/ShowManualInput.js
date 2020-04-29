@@ -12,7 +12,6 @@ export const ShowManualInput = () => {
     e.preventDefault()
     dispatch(fetchProduct(code))
     setCode("")
-
   }
 
   return (
@@ -20,15 +19,10 @@ export const ShowManualInput = () => {
       {!showInput && (
         <Wrapper>
           <Text>Or enter the product code number manually:</Text>
-          <Button type="button" onClick={() => setInput(true)}><ButtonText>MANUAL</ButtonText>
+          <Button type="button" onClick={() => setInput(true)}><ButtonText>manual</ButtonText>
           </Button>
         </Wrapper>
       )}
-      {/* {showInput && (
-        <ManualButton type="button" onClick={() => setInput(false)}>
-          <ManualButtonText>HIDE MANUAL</ManualButtonText>
-        </ManualButton>
-      )} */}
       {showInput && (
         <form onSubmit={handleSubmit}>
           <Input
@@ -38,10 +32,10 @@ export const ShowManualInput = () => {
             placeholder='Enter barcode number...'
             required
           />
-          <ManualButton type='submit'><ManualButtonText>FIND PRODUCT</ManualButtonText></ManualButton>
+          <ManualButton type='submit'><ManualButtonText>find product</ManualButtonText></ManualButton>
           {showInput && (
             <ManualButton type="button" onClick={() => setInput(false)}>
-              <ManualButtonText>HIDE MANUAL</ManualButtonText>
+              <ManualButtonText>hide manual</ManualButtonText>
             </ManualButton>
           )}
         </form>
@@ -73,6 +67,7 @@ const ButtonText = styled.div`
   padding: 5px;
   font-weight: 600;
   color: #F2CB05;
+  text-transform: uppercase;
 `
 
 const Text = styled.p`
@@ -115,18 +110,18 @@ const ManualButtonText = styled.button`
 `
 
 const Input = styled.input`
-font-size: 20px;
-font-family: 'Manrope', sans-serif;
-width: 100%;
-padding: 10px 10px;
-margin: 8px 0;
-box-sizing: border-box;
-border: 2px solid #ccc;
--webkit-transition: 0.5s;
-transition: 0.5s;
-outline: none;
-text-transform: capitalize;
-&:focus {
+  font-size: 20px;
+  font-family: 'Manrope', sans-serif;
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  text-transform: capitalize;
+  &:focus {
   border: 3px solid #F2CB05;
-}
+  }
 `

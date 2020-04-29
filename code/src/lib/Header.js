@@ -3,7 +3,6 @@ import lemonBackground from 'assets/lemonBackground.jpg'
 
 import styled from 'styled-components/macro'
 
-// COMPONENT HEADER
 export const Header = () => (
 
   <Wrapper>
@@ -15,7 +14,6 @@ export const Header = () => (
 
 )
 
-// STYLED COMPONENTS
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;

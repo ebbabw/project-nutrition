@@ -3,13 +3,13 @@ import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { products } from 'reducers/products'
 import { ui } from 'reducers/ui'
-import { LoadingSpinner } from 'lib/LoadingSpinner'
 import { ProductList } from 'components/ProductList'
 import { ShowScanner } from 'components/ShowScanner'
 import { ShowManualInput } from 'components/ShowManualInput'
+import { LoadingSpinner } from 'lib/LoadingSpinner'
 import { Header } from 'lib/Header'
-import lemonBackground from 'assets/lemonBackground.jpg'
 import { Footer } from 'lib/Footer'
+import lemonBackground from 'assets/lemonBackground.jpg'
 import styled from 'styled-components'
 
 
@@ -36,20 +36,20 @@ export const App = () => {
 };
 
 const Main = styled.main`
-display: flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background-image: url(${lemonBackground})
-height: 20vh;
-@media (max-width: 449px) {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-image: url(${lemonBackground})
+  height: 20vh;
+  @media (max-width: 449px) {
   width: 80%;
   padding: 30px;
-}
-@media (min-width: 450px) and (max-width: 750px) {
- width: 80%;
- padding: 30px;
-}
+  }
+  @media (min-width: 450px) and (max-width: 750px) {
+  width: 80%;
+  padding: 30px;
+  }
 `
 
 

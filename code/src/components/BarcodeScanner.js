@@ -48,17 +48,17 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 };
 
 const Video = styled.div`
-width: 600px;
-height: 350px;
-border-radius: 10px;
-overflow: hidden;
-margin: 50px;
-@media(max-width: 449px) {
+  width: 600px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 50px;
+  @media(max-width: 449px) {
   width: 350px;
   height: 250px;
-}
-@media(min-width: 450px) and(max-width: 750px) {
+  }
+  @media(min-width: 450px) and(max-width: 750px) {
   width: 350px;
   height: 250px;
-}
+  }
 `

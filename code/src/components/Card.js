@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-export const Card = ({ title, secondaryText, thumbNailUrl, coverImage, className, children }) => {
-
-
+export const Card = ({ title, secondaryText, coverImage, className, children }) => {
 
   return (
     <Container className={className}>
@@ -46,7 +44,7 @@ const CoverImage = styled.img`
   }
 `
 const ChildrenContent = styled.div`
-padding: 10px;
+  padding: 10px;
 `
 
 const TitleBar = styled.div`

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const onDetected = (code) => {
   console.log(`Code: ${code}`);
   fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
@@ -8,7 +7,6 @@ export const onDetected = (code) => {
     .then((json) => {
       console.log(json);
     });
-
 
   return (
     <div>
@@ -25,7 +23,6 @@ export const onDetected = (code) => {
       <BarcodeScanner onDetected={onDetected}></BarcodeScanner>
     </div>
   );
-
 };
 
 

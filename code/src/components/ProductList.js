@@ -13,15 +13,19 @@ export const ProductList = () => {
     <>
       {code.product && code.status === 1 && (
         <Card
-          title={code.product.ingredients_text}
           coverImage={code.product.image_url}
+          title={code.product.ingredients_text}
           secondaryText={code.product.brands}>
           <Text>
             <Link a href={`https://world.openfoodfacts.org/product/${code.product.code}/`} target="_blank">More Details</Link>
             <p>Origin: {code.product.origins}</p>
+
+            {
+              //if it doesn t exist?????
+            }
             <p>Vegan: {code.product.ingredients[0].vegan === "yes" ? <i class="em em-leaves" aria-role="presentation" aria-label="LEAF FLUTTERING IN WIND">🍃</i> : <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK">✖️</i>}</p>
-            <p>Vegetarian: {code.product.ingredients[1].vegetarian === "yes" ? <i class="em em-leaves" aria-role="presentation" aria-label="LEAF FLUTTERING IN WIND">🍃</i> : <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK">✖️</i>}</p>
-            <p> You should recycle this in your {code.product.packaging} bin!</p>
+            <p>Vegetarian: {code.product.ingredients[1].vegetarian === "yes" ? <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK">🍃</i> : <i class="em em-x" aria-role="presentation" aria-label="CROSS MARK">✖️</i>}</p>
+            <p>You should recycle this in your {code.product.packaging} bin!</p>
           </Text>
           <FinalText>Thank you and have a healthy life!</FinalText>
         </Card>
@@ -32,13 +36,13 @@ export const ProductList = () => {
 }
 
 const Link = styled.a`
-color: grey;
-font-size: 18px;
+  color: grey;
+  font-size: 18px;
   `
 const Text = styled.h3`
-font-size: 18px;
-font-weight: 400;
-text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
   `
 
 const FinalText = styled.h2`

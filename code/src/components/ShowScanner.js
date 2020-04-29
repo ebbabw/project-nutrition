@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { fetchProduct } from 'reducers/products'
-import { useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 
 export const ShowScanner = () => {
   const [showScanner, setShowScanner] = useState(false)
-
   const dispatch = useDispatch()
-
 
   return (
     <Container >
@@ -16,9 +14,7 @@ export const ShowScanner = () => {
         <Wrapper>
           <Text>Click here to scan your product:</Text>
           <Button onClick={() => setShowScanner(true)}>
-            <ButtonText>
-              SCAN
-          </ButtonText>
+            <ButtonText>SCAN</ButtonText>
           </Button>
         </Wrapper>
       )
@@ -32,13 +28,10 @@ export const ShowScanner = () => {
             }} />
         )
         }
-
         {showScanner && (
           <CameraWrapper>
             <Button onClick={() => setShowScanner(false)}>
-              <ButtonText>
-                TURN OFF
-          </ButtonText>
+              <ButtonText>TURN OFF</ButtonText>
             </Button>
           </CameraWrapper>
         )
@@ -79,20 +72,20 @@ const Button = styled.button`
 `
 
 const ButtonText = styled.div`
-display: flex;
-padding: 15px;
-font-weight: 800;
-color: white;
-&:hover {
+  display: flex;
+  padding: 15px;
+  font-weight: 800;
+  color: white;
+  &:hover {
   color: white;
   transition: 0.4s;
-}
+  }
 `
 
 const Container = styled.div`
- display: flex;
- flex-direction: row;
- justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `
 
 const Text = styled.p`

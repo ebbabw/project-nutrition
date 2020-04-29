@@ -14,10 +14,10 @@ export const Error = () => {
 }
 
 const Text = styled.div`
-text-transform: lowercase;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px;
-font-size: 25px;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
 `
