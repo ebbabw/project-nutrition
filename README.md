@@ -14,5 +14,6 @@ Tech used: React, Redux // Redux Toolkit, JSX, Javascript.
 
 
 ## View it live
-https://competent-sammet-b91c6e.netlify.app/
+https://dreamy-beaver-ecc27f.netlify.app/
+
 
